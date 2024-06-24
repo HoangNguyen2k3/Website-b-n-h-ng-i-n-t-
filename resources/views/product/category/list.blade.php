@@ -12,7 +12,7 @@
 @include('home.Components.slider')
 <section>
     <div class="container">
-        <div class="row">
+        <div class="row" id="feature">
             @include('Components.slidebar')
             
             <div class="col-sm-9 padding-right">
@@ -27,13 +27,17 @@
                                         <img src="{{ config('app.base_url').$product->feature_image_path }}" alt="" />
                                         <h2>{{ number_format($product->price) }} VNĐ</h2>
                                         <p>{{ $product->name }}</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="#"
+                                        data-url="{{ route('addToCart',['id'=>$product->id]) }}"
+                                        class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                     <div class="product-overlay">
                                         <div class="overlay-content">
                                             <h2>{{ number_format($product->price) }} VNĐ</h2>
                                             <p>{{ $product->name }}</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <a href="#"
+                                            data-url="{{ route('addToCart',['id'=>$product->id]) }}"
+                                             class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                     </div>
                                 </div>

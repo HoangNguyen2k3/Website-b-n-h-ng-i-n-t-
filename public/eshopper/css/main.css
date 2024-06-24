@@ -6,11 +6,20 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Roboto', sans-serif;
   background:;
   position: relative;
   font-weight:400px;
+
+}
+.test {
+  position: sticky;
+  top: 0; /* Độ cao khi bắt đầu dính */
+  z-index: 1000; /* Đảm bảo phần tử nằm trên các phần tử khác */
 }
 
 ul li {

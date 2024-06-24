@@ -14,7 +14,7 @@
 <br>
 <section>
     <div class="container">
-        <div class="row">
+        <div class="row" id="feature">
          @include('Components.slidebar')
             
             <div class="col-sm-9 padding-right">

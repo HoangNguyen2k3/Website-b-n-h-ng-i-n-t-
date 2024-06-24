@@ -33,7 +33,7 @@
                         <ul>
                             @foreach ($category->categoryChildrent as $categoryChild)
                             <li><a href="{{ route('category.product',
-                            ['slug'=>$categoryChild->slug,'id'=>$categoryChild->id]) }}">
+                            ['slug'=>$categoryChild->slug,'id'=>$categoryChild->id]) }}#feature">
                                 {{ $categoryChild->name }} </a>
                             </li>  
                             @endforeach

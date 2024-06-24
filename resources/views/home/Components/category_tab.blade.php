@@ -21,7 +21,9 @@
                             <img src="{{ config('app.base_url').$productItemTab->feature_image_path }}" alt="" />
                             <h2>{{ number_format($productItemTab->price)}}</h2>
                             <p>{{ $productItemTab->name}}</p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            <a href="#"
+                             data-url="{{ route('addToCart',['id'=>$productItemTab->id]) }}"
+                            class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                         
                     </div>
